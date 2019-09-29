@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane id="main" prefHeight="594.0" prefWidth="560.0">
+         <children>
+            <Button id="start" layoutX="221.0" layoutY="78.0" mnemonicParsing="false" text="START" />
+            <Label id="totalLabel" layoutX="37.0" layoutY="38.0" prefHeight="30.0" prefWidth="113.0" text="Total Number :" />
+            <Label id="currentLabel" layoutX="301.0" layoutY="43.0" prefHeight="20.0" prefWidth="143.0" text="Current Number :" />
+            <TextField id="totalNumber" layoutX="161.0" layoutY="38.0" prefHeight="30.0" prefWidth="60.0" />
+            <TextArea id="window2" layoutX="282.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
+            <TextArea id="window1" layoutX="37.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
+            <Label id="curentLabel" layoutX="444.0" layoutY="38.0" prefHeight="30.0" prefWidth="48.0" text="Label" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
