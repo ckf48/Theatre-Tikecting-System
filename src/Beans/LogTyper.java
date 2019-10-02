@@ -5,7 +5,6 @@ import java.io.*;
 class LogTyper {
 
 
-    private File logFile;
     private BufferedWriter writer;
 
 
@@ -13,7 +12,7 @@ class LogTyper {
 
     private LogTyper() {
         try {
-            logFile = new File("log.txt");
+            File logFile = new File("log.txt");
             writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(logFile)));
         } catch (IOException e) {
             e.printStackTrace();
