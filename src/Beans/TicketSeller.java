@@ -16,11 +16,13 @@ public class TicketSeller implements Runnable {
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
         while (!ticket.isEmpty()){
             String result = ticket.sellTicket();
             System.out.println(name + " " + result);
             LogTyper.getInstance().write(name + " " + result);
         }
     }
+
+
 }
