@@ -9,10 +9,11 @@ public class TestMain {
         Theater.getInstance().cleanSolders();
         Ticket ticket = new TestTicket(10);
         Ticket ticket1 = new NewTicket(10);
-        TicketSeller seller = new TicketSeller(ticket);
-        TicketSeller seller1 = new TicketSeller(ticket1);
-        TicketSeller seller2 = new TicketSeller(ticket);
+        TicketSeller seller = new TicketSeller(ticket,1);
+        TicketSeller seller1 = new TicketSeller(ticket1,2);
+        TicketSeller seller2 = new TicketSeller(ticket,3);
         Theater.getInstance().addSeller(seller);
+        Theater.getInstance().addSeller(seller1);
         Theater.getInstance().addSeller(seller2);
         Theater.getInstance().startSelling();
     }
