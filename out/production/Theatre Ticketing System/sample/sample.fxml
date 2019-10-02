@@ -24,7 +24,7 @@
             <TextField id="totalNumber" layoutX="161.0" layoutY="38.0" prefHeight="30.0" prefWidth="60.0" />
             <TextArea id="window2" layoutX="282.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
             <TextArea id="window1" layoutX="37.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
-            <Label id="curentLabel" layoutX="444.0" layoutY="38.0" prefHeight="30.0" prefWidth="48.0" text="Label" />
+            <Label id="curentLabel" layoutX="444.0" layoutY="38.0" prefHeight="30.0" prefWidth="48.0" />
          </children>
       </Pane>
    </children>

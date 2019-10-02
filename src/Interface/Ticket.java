@@ -1,31 +1,42 @@
 package Interface;
 
+
+import java.util.Vector;
+
+
 public abstract class Ticket {
     private int number;
-    private String kind;
+    private String name;
+    private Vector<Integer> tickets;
 
-    public boolean soldTicket() {
-        if (number > 0) {
-            number--;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
+    protected Ticket(int number) {
         this.number = number;
+        name = this.getClass().getSimpleName();
+        tickets = new Vector<>();
+        for (int i = 0; i < number; i++)
+            tickets.add(i);
+
     }
 
-    public String getKind() {
-        return kind;
+    public boolean isEmpty() {
+        return tickets.isEmpty();
     }
 
-    public void setKind(String kind) {
-        this.kind = kind;
+    private synchronized int getTicket() {
+        if (isEmpty())
+            return 0;
+        int random = (int) (Math.random() * (tickets.size()));
+        int get = tickets.get(random);
+        tickets.remove(random);
+        return get;
     }
+
+    public synchronized String sellTicket() {
+        final int sellNumber = getTicket() + 1;
+        if (sellNumber == 0)
+            return null;
+        return "has sold " + name + " No: " + sellNumber;
+    }
+
+
 }

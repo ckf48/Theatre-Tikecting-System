@@ -6,7 +6,7 @@ import java.util.List;
 public class Theater {
     private static Theater instance = new Theater();
 
-    private List<TicketSolder> solders = new ArrayList<>();
+    private List<TicketSeller> sellers = new ArrayList<>();
 
     private Theater() {
     }
@@ -15,11 +15,17 @@ public class Theater {
         return instance;
     }
 
-    public void addSolder(TicketSolder solder){
-        solders.add(solder);
+    public void addSeller(TicketSeller solder){
+        sellers.add(solder);
     }
 
     public void cleanSolders(){
-        solders.clear();
+        sellers.clear();
+    }
+
+    public void startSelling(){
+        for(TicketSeller seller : sellers){
+            new Thread(seller).start();
+        }
     }
 }
