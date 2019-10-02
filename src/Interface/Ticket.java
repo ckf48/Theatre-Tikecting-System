@@ -5,12 +5,10 @@ import java.util.Vector;
 
 
 public abstract class Ticket {
-    private int number;
     private String name;
     private Vector<Integer> tickets;
 
     protected Ticket(int number) {
-        this.number = number;
         name = this.getClass().getSimpleName();
         tickets = new Vector<>();
         for (int i = 0; i < number; i++)
