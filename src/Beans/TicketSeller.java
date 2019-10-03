@@ -2,9 +2,8 @@ package Beans;
 
 import Interface.Ticket;
 import javafx.application.Platform;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-
+import javafx.scene.control.TextField;
 
 
 public class TicketSeller implements Runnable {
@@ -12,9 +11,9 @@ public class TicketSeller implements Runnable {
     private String name;
     private int index;
     private TextArea text;
-    private TextArea current;
+    private TextField current;
 
-    public TicketSeller(Ticket ticket, int index,TextArea text,TextArea current) {
+    public TicketSeller(Ticket ticket, int index, TextArea text, TextField current) {
         this.ticket = ticket;
         this.name = ticket.getClass().getSimpleName() + " " + this.getClass().getSimpleName();
         this.index = index;
@@ -28,19 +27,20 @@ public class TicketSeller implements Runnable {
 
     @Override
     public synchronized void run() {
-        Platform.runLater(()->{
+        Platform.runLater(() -> {
             text.clear();
         });
 
         while (!ticket.isEmpty()) {
             String result = "Window." + index + " " + name + " " + ticket.sellTicket();
-            Platform.runLater(()->{
+            Platform.runLater(() -> {
                 text.appendText(result + "\n");
+
             });
 
-//            Platform.runLater(()->{
-//                current.setText(String.valueOf(ticket.getCurrentNumber()));
-//            });
+            Platform.runLater(() -> {
+                current.setText(String.valueOf(ticket.getCurrentNumber()));
+            });
 
             LogTyper.getInstance().write(result);
         }

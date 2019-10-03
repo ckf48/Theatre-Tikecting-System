@@ -25,8 +25,8 @@ public class Main extends Application {
     private TextField total1;
     private TextField total2;
 
-    private TextArea current1;
-    private TextArea current2;
+    private TextField current1;
+    private TextField current2;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -57,8 +57,8 @@ public class Main extends Application {
         total1 = (TextField) root.lookup("#total1");
         total2 = (TextField) root.lookup("#total2");
 
-        current1 = (TextArea) root.lookup("current1");
-        current2 = (TextArea) root.lookup("current2");
+        current1 = (TextField) root.lookup("#current1");
+        current2 = (TextField) root.lookup("#current2");
     }
 
     private void initTicketAndSeller(){
