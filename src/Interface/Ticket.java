@@ -7,10 +7,13 @@ import java.util.Vector;
 public abstract class Ticket {
     private String name;
     private Vector<Integer> tickets;
+    private int totalNumber;
 
     protected Ticket(int number) {
         name = this.getClass().getSimpleName();
         tickets = new Vector<>();
+        totalNumber = number;
+
         for (int i = 0; i < number; i++)
             tickets.add(i);
 
@@ -36,5 +39,11 @@ public abstract class Ticket {
         return "has sold " + name + " No: " + sellNumber;
     }
 
+    public synchronized int getCurrentNumber() {
+        return tickets.size();
+    }
 
+    public int getTotalNumber() {
+        return totalNumber;
+    }
 }

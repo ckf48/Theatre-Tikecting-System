@@ -18,13 +18,52 @@
    <children>
       <Pane id="main" prefHeight="594.0" prefWidth="560.0">
          <children>
-            <Button id="start" layoutX="221.0" layoutY="78.0" mnemonicParsing="false" text="START" />
-            <Label id="totalLabel" layoutX="37.0" layoutY="38.0" prefHeight="30.0" prefWidth="113.0" text="Total Number :" />
-            <Label id="currentLabel" layoutX="301.0" layoutY="43.0" prefHeight="20.0" prefWidth="143.0" text="Current Number :" />
-            <TextField id="totalNumber" layoutX="161.0" layoutY="38.0" prefHeight="30.0" prefWidth="60.0" />
-            <TextArea id="window2" layoutX="282.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
-            <TextArea id="window1" layoutX="37.0" layoutY="159.0" prefHeight="383.0" prefWidth="200.0" />
             <Label id="curentLabel" layoutX="444.0" layoutY="38.0" prefHeight="30.0" prefWidth="48.0" />
+            <GridPane layoutX="7.0" layoutY="8.0" prefHeight="94.0" prefWidth="544.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="138.0" text="NewTicket" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="TestTicket" GridPane.rowIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="          Total:" GridPane.columnIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="          Total:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="   Current:" GridPane.columnIndex="3" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="   Current:" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField id="total1" fx:id="total1" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="2" />
+                  <TextField id="total2" fx:id="total2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField id="current1" fx:id="current1" GridPane.columnIndex="4" />
+                  <TextField id="current2" fx:id="current2" prefHeight="30.0" prefWidth="60.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="7.0" layoutY="209.0" prefHeight="384.0" prefWidth="550.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="336.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea id="text1" fx:id="text1" prefHeight="158.0" prefWidth="174.0" GridPane.rowIndex="1" />
+                  <TextArea id="text2" fx:id="text2" prefHeight="158.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextArea id="text3" fx:id="text3" prefHeight="158.0" prefWidth="174.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="             window1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="             window2" GridPane.columnIndex="1" />
+                  <Label prefHeight="20.0" prefWidth="138.0" text="             window3" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+            <Button id="start" fx:id="start" layoutX="246.0" layoutY="137.0" mnemonicParsing="false" text="START" />
          </children>
       </Pane>
    </children>
